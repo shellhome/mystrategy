@@ -126,7 +126,7 @@ class MA(StrategyBase):
 # 策略启动入口
 if __name__ == '__main__':
     #  初始化策略
-    ma = MA(config_file='dual_ma.ini', config_file_encoding='utf-8')
+    ma = MA(config_file='dual_ma.ini', config_file_encoding='gbk2312')
     #import pdb; pdb.set_trace()   # python调试开关
     print ('strategy ready, waiting for market data ......')
     # 策略进入运行，等待数据事件
