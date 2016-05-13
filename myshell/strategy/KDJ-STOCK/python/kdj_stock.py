@@ -239,7 +239,7 @@ class KDJ_STOCK(StrategyBase):
                 #if self.dict_openlong_signal[symbol] == self.openlong_signal :
                 self.open_long(bar.exchange, bar.sec_id, 0, self.open_vol)
                 logging.info('open long, symbol:%s, time:%s '%(symbol, bar.strtime) )
-                print 'open long, symbol:%s, time:%s '%(symbol, bar.strtime)
+                print ('open long, symbol:%s, time:%s '%(symbol, bar.strtime))
             elif slowk[-1] > self.slowk_sell or slowd[-1] > self.slowd_sell:
                 pos = self.get_position( bar.exchange, bar.sec_id, OrderSide_Bid)
                 if pos is not None:
@@ -247,11 +247,11 @@ class KDJ_STOCK(StrategyBase):
                     if vol > 0 :
                         self.open_short(bar.exchange, bar.sec_id, 0, vol)
                         logging.info( 'open short, symbol:%s, time:%s '%(symbol, bar.strtime) )
-                        print 'open short, symbol:%s, time:%s '%(symbol, bar.strtime)
+                        print ('open short, symbol:%s, time:%s '%(symbol, bar.strtime))
         
             
 if __name__=='__main__':
-    print get_version()
+    print (get_version())
     cur_date = datetime.date.today().strftime('%Y%m%d')
     log_file = 'kdj_stock' + cur_date + '.log'
     logging.config.fileConfig('kdj_stock.ini')
@@ -280,5 +280,5 @@ if __name__=='__main__':
     kdj_stock.init_strategy()
     ret = kdj_stock.run()
 
-    print 'run result %s'%ret
+    print ('run result %s'%ret)
     
