@@ -5,3 +5,5 @@ encoding//src/mypython.py=utf-8
 encoding//src/test_backtest.py=utf-8
 encoding//src/test_backtest_cw_config_ini.py=utf-8
 encoding//strategy/Dual-MA/python/dual_ma.py=utf-8
+encoding//strategy/Dual-MA/python/dual_ma2.py=utf-8
+encoding//strategy/MACD-STOCK/python/macd_stock.py=utf-8
